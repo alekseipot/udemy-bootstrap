@@ -88,19 +88,27 @@
     <!--##################START HERE####################-->
 
     <!-- POPOVER -->
-    <button class="btn btn-danger">
+    <button class="btn btn-danger"
+    data-toggle="popover" data-parent="top" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure nam odit. Adipisci commodi cumque
+      explicabo laudantium sit! Aliquam earum magni nemo placeat praesentium quia quidem repellat sit tenetur voluptate.">
       Toggle popover
     </button>
 
-    <button class="btn btn-primary">
+    <button class="btn btn-primary"
+            data-toggle="popover" data-parent="right" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure nam odit. Adipisci commodi cumque
+      explicabo laudantium sit! Aliquam earum magni nemo placeat praesentium quia quidem repellat sit tenetur voluptate.">
       Toggle popover
     </button>
 
-    <button class="btn btn-warning">
+    <button class="btn btn-warning"
+            data-toggle="popover" data-parent="bottom" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure nam odit. Adipisci commodi cumque
+      explicabo laudantium sit! Aliquam earum magni nemo placeat praesentium quia quidem repellat sit tenetur voluptate.">
       Toggle popover
     </button>
 
-    <button class="btn btn-info">
+    <button class="btn btn-info"
+            data-toggle="popover" data-parent="left" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure nam odit. Adipisci commodi cumque
+      explicabo laudantium sit! Aliquam earum magni nemo placeat praesentium quia quidem repellat sit tenetur voluptate.">
       Toggle popover
     </button>
 
@@ -108,16 +116,18 @@
     <br>
 
     <!-- DISMISSIBLE POPOVER -->
-    <button class="btn btn-primary">
+    <button class="btn btn-primary" id="hello"
+            data-toggle="popover" data-trigger="focus" data-parent="top" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet iure nam odit. Adipisci commodi cumque
+      explicabo laudantium sit! Aliquam earum magni nemo placeat praesentium quia quidem repellat sit tenetur voluptate.">
       Toggle popover
     </button>
 
     <hr>
 
     <!-- CONTROL WITH JS -->
-    <button class="btn btn-secondary">Show Popover</button>
-    <button class="btn btn-secondary">Hide Popover</button>
-    <button class="btn btn-secondary">Toggle Popover</button>
+    <button class="btn btn-secondary" onclick="showPopover()">Show Popover</button>
+    <button class="btn btn-secondary" onclick="hidePopover()">Hide Popover</button>
+    <button class="btn btn-secondary" onclick="togglePopover()">Toggle Popover</button>
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -129,6 +139,36 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script>
+    //Init popovers
+    $('[data-toggle="popover"]').popover()
+
+    function showPopover() {
+      $('#hello').popover('show');
+    }
+
+    function hidePopover() {
+      $('#hello').popover('hide');
+    }
+
+    function togglePopover() {
+      $('#hello').popover('toggle');
+    }
+
+    $('#hello').on('show.bs.popover', function (){
+      console.log('popover show')
+    })
+
+    $('#hello').on('hide.bs.popover', function (){
+      console.log('popover hide')
+    })
+
+    $('#hello').on('shown.bs.popover', function (){
+      console.log('popover shown')
+    })
+
+    $('#hello').on('hidden.bs.popover', function (){
+      console.log('popover hidden')
+    })
 
   </script>
 </body>
