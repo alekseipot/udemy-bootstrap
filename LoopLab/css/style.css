@@ -33,7 +33,14 @@ body {
 
 #home-section .fas {
     color: #008ed6;
-    background: #ffffff;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#explore-section .fas, #share-section .fas {
+    color: #fff;
+    background: #333;
     padding: 5px;
     border-radius: 5px;
 }
