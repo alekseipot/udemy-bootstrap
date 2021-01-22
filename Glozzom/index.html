@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Bootstrap Theme</title>
 </head>
@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container">
         <a href="index.html" class="navbar-brand">Clozzom</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="navbarCollapse">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -41,13 +41,59 @@
     </div>
 </nav>
 
-<script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+<!--SHOWCASE SLIDER-->
+<section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-item carousel-image-1 active">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading One</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi cum
+                            harum iure laborum nisi numquam optio quibusdam, rem tempore?</p>
+                        <a href="#" class="btn btn-danger btn-lg">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-image-2">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block mb-5">
+                        <h1 class="display-3">Heading Two</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi cum
+                            harum iure laborum nisi numquam optio quibusdam, rem tempore?</p>
+                        <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-image-3">
+                <div class="container">
+                    <div class="carousel-caption d-none d-sm-block text-right mb-5">
+                        <h1 class="display-3">Heading Three</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi cum
+                            harum iure laborum nisi numquam optio quibusdam, rem tempore?</p>
+                        <a href="#" class="btn btn-success btn-lg">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" data-slide="prev">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 <script>
 
@@ -55,8 +101,7 @@
     $('#year').text(new Date().getFullYear())
 
     //Init scrollspy
-    $('body').scrollspy({target: '#main-nav'})
-
+    // $('body').scrollspy({target: '#main-nav'})
 </script>
 </body>
 </html>
