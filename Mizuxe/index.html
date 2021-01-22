@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Bootstrap Theme</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+<body id="home" data-spy="scroll" data-target="#main-nav">
+<nav id="main-nav" class="navbar navbar-expand-md navbar-light fixed-top py-4">
     <div class="container">
         <a href="#home" class="navbar-brand">
             <img src="img/mlogo.png" width="50" height="50" alt="logo">
@@ -338,6 +338,21 @@
 
     //Init scrollspy
     $('body').scrollspy({target: '#main-nav'})
+
+    //Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            const hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            })
+        }
+    });
 
 </script>
 </body>
