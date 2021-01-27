@@ -146,6 +146,36 @@
         </div>
     </div>
 </section>
+
+<!--VIDEO PLAY SECTION-->
+<section id="video-play">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col">
+                <div class="container py-5">
+                    <a href="#" class="video" data-video="https://www.youtube.com/embed/QH2-TGUlwu4" data-toggle="modal"
+                       data-target="#videoModal">
+                        <i class="fas fa-play fa-3x"></i>
+                    </a>
+                    <h1>See What We Do</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--VIDEO MODAL-->
+<div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                <iframe allowfullscreen src="" frameborder="0" height="350" width="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -165,6 +195,20 @@
         interval: 6000,
         pause: 'hover'
     })
+
+    //Video Play
+    $(function () {
+            $(".video").click(function () {
+                var theModal = $(this).data("target"),
+                    videoSRC = $(this).attr("data-video"),
+                    videoSRCAuto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+                $(theModal + ' iframe').attr('src', videoSRCAuto);
+                $(theModal + ' button.close').click(function () {
+                    $(theModal + ' iframe').attr('src', videoSRC)
+                })
+            })
+        }
+    )
     //Init scrollspy
     // $('body').scrollspy({target: '#main-nav'})
 </script>
