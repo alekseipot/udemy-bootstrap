@@ -232,6 +232,25 @@
         </div>
     </div>
 </section>
+
+<!--NEWSLETTER-->
+<section id="newsletter" class="text-center p-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Sign Up For Our Newsletter</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, atque eaque facilis ipsum
+                    laudantium maiores quaerat rerum velit veniam voluptate.</p>
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
+                    <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Email">
+                    <button class="btn btn-primary mb-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--VIDEO MODAL-->
 <div class="modal fade" id="videoModal">
     <div class="modal-dialog">
@@ -282,7 +301,7 @@
     )
 
     //Light box
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
         event.preventDefault();
         $(this).ekkoLightbox();
     });
