@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+          integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+          crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
     <title>Bootstrap Theme</title>
 </head>
@@ -164,7 +167,71 @@
     </div>
 </section>
 
-
+<!--PHOTO GALLERY-->
+<section id="gallery" class="py-5">
+    <div class="container">
+        <h1 class="text-center">Photo Gallery</h1>
+        <p class="text-center">Check out our photos</p>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/560x560"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="560"
+                   data-width="560">
+                    <img src="http://source.unsplash.com/random/560x560" alt="image" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/560x560"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="561"
+                   data-width="561">
+                    <img src="http://source.unsplash.com/random/561x561" alt="image" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/560x560"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="562"
+                   data-width="562">
+                    <img src="http://source.unsplash.com/random/562x562" alt="image" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/563x563"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="563"
+                   data-width="563">
+                    <img src="http://source.unsplash.com/random/563x563" alt="image" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/564x564"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="564"
+                   data-width="564">
+                    <img src="http://source.unsplash.com/random/564x564" alt="image" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://source.unsplash.com/random/565x565"
+                   data-toggle="lightbox"
+                   data-gallery="img-gallery"
+                   data-height="565"
+                   data-width="565">
+                    <img src="http://source.unsplash.com/random/565x565" alt="image" class="img-fluid">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 <!--VIDEO MODAL-->
 <div class="modal fade" id="videoModal">
     <div class="modal-dialog">
@@ -176,6 +243,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -184,6 +252,9 @@
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+        integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
         crossorigin="anonymous"></script>
 <script>
 
@@ -209,6 +280,12 @@
             })
         }
     )
+
+    //Light box
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
     //Init scrollspy
     // $('body').scrollspy({target: '#main-nav'})
 </script>
