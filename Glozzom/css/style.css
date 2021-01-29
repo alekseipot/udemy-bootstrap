@@ -56,3 +56,11 @@
 #video-play a {
     color: #fff;
 }
+
+#page-header {
+    height: 200px;
+    background: url('../img/image1.jpg') fixed 0 -300px;
+    color: #fff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+}
