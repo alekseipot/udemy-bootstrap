@@ -143,6 +143,52 @@
         </div>
     </div>
 </section>
+
+<!--TESTIMONIALS-->
+<section id="testimonials" class="p-4 bg-dark text-white">
+    <div class="container">
+        <div class="text-center">
+            <h2>testimonials</h2>
+            <div class="row text-center">
+                <div class="col">
+                    <div class="slider">
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="md-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, reprehenderit.
+                                </p>
+                                <footer class="blockquote-footer">John Doe From
+                                    <cite title="Company 1">Company 1</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="md-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, reprehenderit.
+                                </p>
+                                <footer class="blockquote-footer">Sam Smith From
+                                    <cite title="Company 2">Company 2</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        <div>
+                            <blockquote class="blockquote">
+                                <p class="md-0">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, reprehenderit.
+                                </p>
+                                <footer class="blockquote-footer">Meghan Williams From
+                                    <cite title="Company 3">Company 3</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 <!--FOOTER-->
 <fotter id="main-footer" class="text-center p-4">
     <div class="container">
@@ -172,7 +218,11 @@
     //GEt the current year for the copyright
     $('#year').text(new Date().getFullYear())
 
-
+    $('.slider').slick({
+        infinite: true,
+        slideToShow: 1,
+        slideToScroll: 1,
+    })
 </script>
 </body>
 </html>
